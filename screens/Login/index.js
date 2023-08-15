@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Image, Text } from 'react-native';
 import Logo from "../../assets/defaultLogo.png"
 import globalStyles from '../../globalStyles';
+import LoginForm from './LoginForm';
 
 const Login = () => {
   return (
@@ -11,9 +12,9 @@ const Login = () => {
       <Image
         style={globalStyles.image}
         source={Logo}
-        alt="logo"
+        alt="logo Yoga Mangala"
       />
-      {/* Your LoginForm component */}
+      <LoginForm/>
       <Text>Não possui conta? Crie uma aqui</Text>
       {/* Your SignupModal component */}
     </View>

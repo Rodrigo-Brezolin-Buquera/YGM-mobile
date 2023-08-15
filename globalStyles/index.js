@@ -1,8 +1,5 @@
 import { StyleSheet } from 'react-native';
 
-
-
-
 export const colors = {
     cian: "#62B6B7",
     yellow: "#F3C046",
@@ -24,5 +21,16 @@ export default StyleSheet.create({
     image: {
         maxWidth: 300,
         maxHeight: 300
+    },
+    formButton: {
+        backgroundColor: colors.yellow,
+        padding: 10,
+        borderRadius: 10,
+        alignItems: 'center'
+    },
+    buttonText: {
+        color: colors.black,
+        fontWeight: 'bold'
     }
+
 });
