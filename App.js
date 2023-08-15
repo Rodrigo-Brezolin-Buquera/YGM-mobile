@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import Login from './screens/Login';
+import Routes from './Router/Routes';
 
 export default function App() {
   return (
-    <Login/>
-  );
+    <Routes />
+    );
 }
 
 

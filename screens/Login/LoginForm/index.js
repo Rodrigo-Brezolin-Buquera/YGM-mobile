@@ -22,10 +22,11 @@ const LoginForm = ({ navigation }) => {
                 />
                 <TouchableOpacity
                     style={globalStyles.formButton}
-                    onPress={() => { }}
+                    onPress={()=>goToAdmin(navigation)}
+
                     disabled={loading}
                 >
-                    <Text style={globalStyles.buttonText} onPress={()=>goToAdmin(navigation)} >Acessar</Text>
+                    <Text style={globalStyles.buttonText}  >Acessar</Text>
                 </TouchableOpacity>
             </View>
             <Text style={styles.errorMessage}>

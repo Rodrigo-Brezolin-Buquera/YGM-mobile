@@ -1,3 +1,3 @@
 export const goToAdmin = (navigation) => {
-    navigation.navigate('Admin');
+    navigation.push("Admin");
 }

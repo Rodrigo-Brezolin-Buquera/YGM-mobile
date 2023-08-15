@@ -1,4 +1,3 @@
-import { useNavigation } from '@react-navigation/native';
 import React, {useState} from 'react'
 import { View, Image, Text } from 'react-native';
 import Logo from "../../assets/defaultLogo.png"
@@ -6,14 +5,12 @@ import globalStyles from '../../globalStyles';
 import LoginForm from './LoginForm';
 import SignupModal from './SignUpModal';
 
-const Login = () => {
+const Login = ({navigation}) => {
   const [isModalVisible, setModalVisible] = useState(false);
-  const navigation = useNavigation();
 
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
   };
-
 
   return (
     <View
