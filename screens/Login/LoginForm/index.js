@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import globalStyles from '../../../globalStyles';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import styles from './styles';
+import { goToAdmin } from '../../../Router/Coordinator';
 
 const LoginForm = ({ navigation }) => {
     const [loading, setLoading] = useState(false);
@@ -12,11 +13,11 @@ const LoginForm = ({ navigation }) => {
             <View style={styles.form}>
                 <TextInput
                     placeholder="Email"
-                    style={styles.input}
+                    style={globalStyles.input}
                 />
                 <TextInput
                     placeholder="Senha"
-                    style={styles.input}
+                    style={globalStyles.input}
                     secureTextEntry={!showPassword}
                 />
                 <TouchableOpacity
@@ -24,7 +25,7 @@ const LoginForm = ({ navigation }) => {
                     onPress={() => { }}
                     disabled={loading}
                 >
-                    <Text style={globalStyles.buttonText} >Acessar</Text>
+                    <Text style={globalStyles.buttonText} onPress={()=>goToAdmin(navigation)} >Acessar</Text>
                 </TouchableOpacity>
             </View>
             <Text style={styles.errorMessage}>
