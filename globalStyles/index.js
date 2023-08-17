@@ -18,6 +18,12 @@ export default StyleSheet.create({
         backgroundColor: colors.grey,
         minHeight: '100%',
     },
+    centerView: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
     image: {
         maxWidth: 300,
         maxHeight: 300

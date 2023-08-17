@@ -1,8 +1,16 @@
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
+import styles from './styles';
+import { colors } from "../../globalStyles"
+
+const icons = [
+  require("../../assets/homeIcon.png"),
+  require("../../assets/agendaIcon.png"),
+  require("../../assets/businessIcon.png")
+]
 
 const TabBar = ({ state, descriptors, navigation }) => {
   return (
-    <View style={{ flexDirection: 'row' }}>
+    <View style={styles.tabBar}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =
@@ -41,11 +49,21 @@ const TabBar = ({ state, descriptors, navigation }) => {
             testID={options.tabBarTestID}
             onPress={onPress}
             onLongPress={onLongPress}
-            style={{ flex: 1 }}
+            style={styles.tabItem}
           >
-            <Text style={{ color: isFocused ? '#673ab7' : '#222' }}>
-              {label}
-            </Text>
+
+            <View
+              style={[styles.overlay, isFocused && { backgroundColor: `${colors.yellow}80` }]}
+            >
+              <Image
+                source={icons[index]}
+                style={styles.icon}
+              />
+              <Text >
+                {label}
+              </Text>
+            </View>
+
           </TouchableOpacity>
         );
       })}
