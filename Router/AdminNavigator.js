@@ -2,6 +2,10 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Admin from '../screens/Admin';
 import { View, Text, TouchableOpacity } from 'react-native';
+import Agenda from '../screens/Agenda';
+import Business from '../screens/Business';
+import AdminStack from './AdminStack';
+import AgendaStack from './ClassStack';
 
 
 
@@ -14,8 +18,8 @@ function TabBar({ state, descriptors, navigation }) {
           options.tabBarLabel !== undefined
             ? options.tabBarLabel
             : options.title !== undefined
-            ? options.title
-            : route.name;
+              ? options.title
+              : route.name;
 
         const isFocused = state.index === index;
 
@@ -39,6 +43,7 @@ function TabBar({ state, descriptors, navigation }) {
 
         return (
           <TouchableOpacity
+            key={index}
             accessibilityRole="button"
             accessibilityState={isFocused ? { selected: true } : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}
@@ -63,14 +68,13 @@ const Tab = createBottomTabNavigator();
 
 const AdminNavigator = () => {
   return (
-      <Tab.Navigator tabBar={(props) => <TabBar {...props} />}> 
-        <Tab.Screen name="Home" component={Admin} />
-      </Tab.Navigator>
+    <Tab.Navigator tabBar={(props) => <TabBar {...props} />} screenOptions={{ headerShown: false }}>
+      <Tab.Screen name="Home" component={AdminStack} />
+      <Tab.Screen name="Agenda" component={AgendaStack} />
+      <Tab.Screen name="Space" component={Business} />
 
-
+    </Tab.Navigator>
   );
 };
-
-
 
 export default AdminNavigator;
