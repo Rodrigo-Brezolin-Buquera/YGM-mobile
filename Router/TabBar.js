@@ -1,15 +1,6 @@
-import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Admin from '../screens/Admin';
 import { View, Text, TouchableOpacity } from 'react-native';
-import Agenda from '../screens/Agenda';
-import Business from '../screens/Business';
-import AdminStack from './AdminStack';
-import AgendaStack from './ClassStack';
 
-
-
-function TabBar({ state, descriptors, navigation }) {
+const TabBar = ({ state, descriptors, navigation }) => {
   return (
     <View style={{ flexDirection: 'row' }}>
       {state.routes.map((route, index) => {
@@ -62,19 +53,5 @@ function TabBar({ state, descriptors, navigation }) {
   );
 }
 
+export default TabBar
 
-
-const Tab = createBottomTabNavigator();
-
-const AdminNavigator = () => {
-  return (
-    <Tab.Navigator tabBar={(props) => <TabBar {...props} />} screenOptions={{ headerShown: false }}>
-      <Tab.Screen name="Home" component={AdminStack} />
-      <Tab.Screen name="Agenda" component={AgendaStack} />
-      <Tab.Screen name="Space" component={Business} />
-
-    </Tab.Navigator>
-  );
-};
-
-export default AdminNavigator;
