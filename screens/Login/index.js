@@ -4,6 +4,7 @@ import Logo from "../../assets/defaultLogo.png"
 import globalStyles from '../../globalStyles';
 import LoginForm from './LoginForm';
 import SignupModal from './SignUpModal';
+import styles from './styles';
 
 const Login = ({navigation}) => {
   const [isModalVisible, setModalVisible] = useState(false);
@@ -17,7 +18,7 @@ const Login = ({navigation}) => {
       style={globalStyles.container}
     >
       <Image
-        style={globalStyles.image}
+        style={styles.logo}
         source={Logo}
         alt="logo Yoga Mangala"
       />

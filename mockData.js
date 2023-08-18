@@ -54,21 +54,26 @@ export const mockUsers = [
         admin: false,
         email: "RODRIGOBBUQUERA@GMAIL.COM",
         id: "HfyQMsz00UbILrh9tPHzwytoRqc2",
-        name: "Rodrigo Brezolin"
+        name: "Rodrigo Brezolin",
+        createdAt: "17/06/2023"
     },
     {
         active: true,
         admin: false,
         email: "RODRIGOBBUQUERA@GMAIL.COM",
         id: "MtblzYHeisbqkrOj2xG068be5wn22",
-        name: "Louize baya"
+        name: "Louize baya",
+        createdAt: "17/06/2023"
+
     },
     {
         active: false,
         admin: false,
         email: "RODRIGOBBUQUERA@GMAIL.COM",
         id: "MtblzYHeisbqkrOj2xG068be5wn2222",
-        name: "Louize"
+        name: "Louize",
+        createdAt: "17/06/2023"
+
     }
 
 ]
