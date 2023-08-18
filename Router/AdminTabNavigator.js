@@ -3,7 +3,7 @@ import Business from '../screens/Business';
 import AdminStack from './AdminStack';
 import AgendaStack from './ClassStack';
 import TabBar from '../components/TabBar';
-import Header from '../components/header';
+import Header from "../components/Header"
 
 const Tab = createBottomTabNavigator();
 
