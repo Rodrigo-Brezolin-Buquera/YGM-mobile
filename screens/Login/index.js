@@ -14,9 +14,7 @@ const Login = ({navigation}) => {
   };
 
   return (
-    <View
-      style={globalStyles.container}
-    >
+    <View style={globalStyles.container} >
       <Image
         style={styles.logo}
         source={Logo}

@@ -6,6 +6,7 @@ export default StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
+        paddingHorizontal:10,
         backgroundColor:colors.white
     },
     tabItem:{
@@ -15,15 +16,18 @@ export default StyleSheet.create({
         justifyContent: 'center'
     },
     icon:{
-        width:32,
-        height:32
+        width:24,
+        height:24
     },
     overlay:{
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 10,
-        width: 70,
-        height:60
+        width: 65,
+        height:50
+    },
+    label:{
+        fontSize:12
     }
 });

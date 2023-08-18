@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const colors = {
     cian: "#62B6B7",
+    lightCian: "#85c6c7",
     yellow: "#F3C046",
     black: "#2D3748",
     grey: "#f2f3f7",

@@ -59,7 +59,7 @@ const TabBar = ({ state, descriptors, navigation }) => {
                 source={icons[index]}
                 style={styles.icon}
               />
-              <Text >
+              <Text style={styles.label} >
                 {label}
               </Text>
             </View>

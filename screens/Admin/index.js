@@ -18,15 +18,13 @@ const Admin = () => {
     }
   };
 
-
-
   return (
     <View style={globalStyles.container} >
       <View style={globalStyles.buttonContainer}>
         <TouchableOpacity
           style={[
             globalStyles.button,
-            { backgroundColor: view === "users" ? colors.cian : globalStyles.button.backgroundColor }
+            { backgroundColor: view === "users" ? colors.lightCian : globalStyles.button.backgroundColor }
           ]}
           onPress={() => setView('users')}
         >
@@ -36,7 +34,7 @@ const Admin = () => {
         <TouchableOpacity
            style={[
             globalStyles.button,
-            { backgroundColor: view === "contracts" ? colors.cian : globalStyles.button.backgroundColor }
+            { backgroundColor: view === "contracts" ? colors.lightCian : globalStyles.button.backgroundColor }
           ]}
           onPress={() => setView('contracts')}
         >
