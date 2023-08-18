@@ -14,13 +14,7 @@ const Admin = ({navigation}) => {
       >
         <Text style={globalStyles.buttonText}  >Ir pra user</Text>
       </TouchableOpacity>
-
-      <TouchableOpacity
-        style={globalStyles.formButton}
-        onPress={() => goToClass(navigation)}
-      >
-        <Text style={globalStyles.buttonText}  >Ir pra class</Text>
-      </TouchableOpacity>
+ 
 
     </View>
   )
