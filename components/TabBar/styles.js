@@ -1,10 +1,12 @@
 import { StyleSheet } from 'react-native';
+import { colors } from '../../globalStyles';
 
 export default StyleSheet.create({
     tabBar: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor:colors.white
     },
     tabItem:{
         flex: 1,

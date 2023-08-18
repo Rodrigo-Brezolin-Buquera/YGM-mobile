@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, View, TouchableOpacity } from 'react-native'
+import Header from '../../components/header'
 import globalStyles from '../../globalStyles'
 import { goToClass, goToUser } from '../../Router/Coordinator'
 
