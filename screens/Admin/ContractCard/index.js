@@ -3,18 +3,16 @@ import { TouchableOpacity, Text, View } from 'react-native';
 import { goToContract } from '../../../Router/Coordinator';
 import { styles } from '../styles';
 
-const UserCard = ({ user, navigation }) => {
+const ContractCard = ({ contract, navigation }) => {
 
   return (
     <TouchableOpacity
       style={styles.card}
-      onPress={() => goToContract(navigation, user.id)}
+      onPress={() => goToContract(navigation, contract.id)}
     >
-      <Text style={styles.label}>{user.name}</Text>
+      <Text style={styles.label}>{contract.name}</Text>
       <View style={styles.line}>
-        <Text >Primeiro acesso:</Text>
-        <Text >{user.createdAt}</Text>
-
+        <Text >{contract.plan}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -22,4 +20,4 @@ const UserCard = ({ user, navigation }) => {
 
 
 
-export default memo(UserCard);
+export default memo(ContractCard);

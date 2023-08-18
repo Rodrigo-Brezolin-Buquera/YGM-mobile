@@ -34,7 +34,7 @@ export const mockContracts = [
         ends: "17/06/2023",
         id: "MtblzYHeisbqkrOj2xG068be5wn22",
         name: "Louize baya",
-        plan: "1X-Mensal",
+        plan: "1x-Mensal",
         started: "17/06/2023"
     },
     {

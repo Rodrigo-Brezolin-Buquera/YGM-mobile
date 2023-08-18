@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Text, View, TouchableOpacity } from 'react-native'
 import globalStyles, { colors } from '../../globalStyles'
+import ContractList from './ContractList';
 import UserList from './UserList';
 
 const Admin = () => {
@@ -11,7 +12,7 @@ const Admin = () => {
       case 'users':
         return <UserList />
       case 'contracts':
-        return <Text>Contratos</Text>;
+        return <ContractList/>;
       default:
         return null;
     }

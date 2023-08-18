@@ -6,7 +6,7 @@ import {mockUsers} from "../../../mockData"
 
 
 const UserList = () => {
-    const [userList, setUserList] = useState(mockUsers)
+    const [list, setList] = useState(mockUsers)
     const navigation = useNavigation();
 
     // na requisição já buscar usuário inativos
@@ -14,9 +14,9 @@ const UserList = () => {
     return (
         <>
             {
-                userList.length ?
+                list.length ?
                     <FlatList
-                        data={userList}
+                        data={list}
                         renderItem={({ item }) => <UserCard user={item} navigation={navigation} />}
                         keyExtractor={item => item.id}
                     />
