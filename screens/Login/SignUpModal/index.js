@@ -44,7 +44,7 @@ const SignupModal = ({ isModalVisible, toggleModal, navigation }) => {
                         />
                         {/* FormErrorMessage */}
                         <TouchableOpacity
-                            style={globalStyles.formButton}
+                            style={globalStyles.button}
                             onPress={() => toggleModal(false)}
                             disabled={loading}
                         >

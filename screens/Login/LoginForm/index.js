@@ -21,7 +21,7 @@ const LoginForm = ({ navigation }) => {
                     secureTextEntry={!showPassword}
                 />
                 <TouchableOpacity
-                    style={globalStyles.formButton}
+                    style={globalStyles.button}
                     onPress={()=>goToAdmin(navigation)}
 
                     disabled={loading}

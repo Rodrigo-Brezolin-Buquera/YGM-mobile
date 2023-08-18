@@ -1,20 +1,42 @@
-import React from 'react'
-import { Text, View, TouchableOpacity } from 'react-native'
+import { useState } from 'react'
+import { Text, View, TouchableOpacity, Button } from 'react-native'
 import globalStyles from '../../globalStyles'
-import { goToClass, goToUser } from '../../Router/Coordinator'
 
-const Admin = ({navigation}) => {
+const Admin = ({ navigation }) => {
+  const [view, setView] = useState(null);
+
+  const ListView = () => {
+    switch (view) {
+      case 'users':
+        return <Text>users</Text>;
+      case 'contracts':
+        return <Text>Contratos</Text>;
+      default:
+        return null;
+    }
+  };
+
+
   return (
     <View style={globalStyles.container} >
-      <Text>Admin</Text>
+      <View style={ globalStyles.buttonContainer }>
+        <TouchableOpacity
+          style={globalStyles.button}
+          onPress={() => setView('users')}
+        >
+          <Text style={globalStyles.buttonText}  >Ativar contas</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity
-        style={globalStyles.formButton}
-        onPress={() => goToUser(navigation)}
-      >
-        <Text style={globalStyles.buttonText}  >Ir pra user</Text>
-      </TouchableOpacity>
- 
+        <TouchableOpacity
+          style={globalStyles.button}
+          onPress={() => setView('contracts')}
+        >
+          <Text style={globalStyles.buttonText}  >Usuários</Text>
+        </TouchableOpacity>
+      </View>
+
+
+      <ListView />
 
     </View>
   )

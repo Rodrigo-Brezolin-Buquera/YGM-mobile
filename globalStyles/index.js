@@ -14,9 +14,16 @@ export default StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         paddingBottom: '10em',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         backgroundColor: colors.grey,
         minHeight: '100%',
+    },
+    buttonContainer:{
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        marginVertical: 20,
+        paddingHorizontal: 40,
+        width: "100%"
     },
     centerView: {
         flex: 1,
@@ -28,15 +35,24 @@ export default StyleSheet.create({
         maxWidth: 300,
         maxHeight: 300
     },
-    formButton: {
+    button: {
         backgroundColor: colors.yellow,
         padding: 10,
         borderRadius: 10,
-        alignItems: 'center'
+        alignItems: 'center',
+        shadowColor: '#000', 
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.3,
+        shadowRadius: 3.84,
+        elevation: 5,
     },
     buttonText: {
         color: colors.black,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontSize:18
     },
     input: {
         marginBottom: 10,

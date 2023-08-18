@@ -8,7 +8,7 @@ const Agenda = ({navigation}) => {
     <View style={globalStyles.container} >
       <Text>Agenda</Text>
       <TouchableOpacity
-        style={globalStyles.formButton}
+        style={globalStyles.button}
         onPress={() => goToClass(navigation)}
       >
         <Text style={globalStyles.buttonText}  >Ir pra class</Text>
