@@ -1,14 +1,26 @@
 import { useState } from 'react'
 import { Text, View, TouchableOpacity } from 'react-native'
 import globalStyles, { colors } from '../../globalStyles'
+import AvailableClasses from './AvailableClasses.js';
 import CreateClassModal from './CreateClassModal.js';
 
 const Agenda = ({ navigation }) => {
-  const [view, setView] = useState("Today");
+  const [view, setView] = useState("today");
   const [isModalVisible, setModalVisible] = useState(false);
 
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
+  };
+
+  const ClassesView = () => {
+    switch (view) {
+      case 'today':
+        return <AvailableClasses navigation={navigation} />
+      case 'week':
+        return <Text>Calendar</Text>;
+      default:
+        return <AvailableClasses />;
+    }
   };
 
 
@@ -19,7 +31,7 @@ const Agenda = ({ navigation }) => {
           style={[
             globalStyles.button,
           ]}
-          onPress={toggleModal}       
+          onPress={toggleModal}
         >
           <Text style={globalStyles.buttonText}  >Nova aula</Text>
         </TouchableOpacity>
@@ -27,9 +39,9 @@ const Agenda = ({ navigation }) => {
         <TouchableOpacity
           style={[
             globalStyles.button,
-            { backgroundColor: view === "Today" ? colors.lightCian : globalStyles.button.backgroundColor }
+            { backgroundColor: view === "today" ? colors.lightCian : globalStyles.button.backgroundColor }
           ]}
-          onPress={() => setView('Today')}
+          onPress={() => setView('today')}
         >
           <Text style={globalStyles.buttonText}  >Hoje</Text>
         </TouchableOpacity>
@@ -37,16 +49,16 @@ const Agenda = ({ navigation }) => {
         <TouchableOpacity
           style={[
             globalStyles.button,
-            { backgroundColor: view === "Week" ? colors.lightCian : globalStyles.button.backgroundColor }
+            { backgroundColor: view === "week" ? colors.lightCian : globalStyles.button.backgroundColor }
           ]}
-          onPress={() => setView('Week')}
+          onPress={() => setView('week')}
         >
           <Text style={globalStyles.buttonText}  >Semana</Text>
         </TouchableOpacity>
       </View>
 
-
-      <CreateClassModal  isModalVisible={isModalVisible} toggleModal={toggleModal} navigation={navigation}/>
+      <ClassesView/>
+      <CreateClassModal isModalVisible={isModalVisible} toggleModal={toggleModal} navigation={navigation} />
 
     </View>
   )

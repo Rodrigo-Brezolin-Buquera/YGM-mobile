@@ -6,8 +6,8 @@ export const goToUser = (navigation) => {
     navigation.navigate("Admin",  { replace: true });
 }
 
-export const goToClass = (navigation) => {
-    navigation.push("Class");
+export const goToClass = (navigation, id) => {
+    navigation.push("Class", {id});
 }
 
 export const goToContract = (navigation, id ) => {

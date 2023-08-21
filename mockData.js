@@ -18,7 +18,18 @@ export const mockClasses = [
         name: "Hatha",
         teacher: "Rodrigo",
         time: "17:56"
-    }]
+    },
+    {
+        capacity: 16,
+        date: "21/08/2023",
+        day: "Terça",
+        groupId: "2023-06-16-17:56-Hatha",
+        id: "JYnMJsfqi8c9VF1fNca22n",
+        name: "Hatha",
+        teacher: "Rodrigo",
+        time: "18:56"
+    },
+]
 
 export const mockContracts = [
     {

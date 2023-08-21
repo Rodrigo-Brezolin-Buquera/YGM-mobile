@@ -28,7 +28,7 @@ export default StyleSheet.create({
     },
     centerView: {
         flex: 1,
-        flexDirection: 'row',
+        flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center'
     },
