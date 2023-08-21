@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../../globalStyles';
+import { applyShadow, colors } from '../../../globalStyles';
 
 
 export const styles = StyleSheet.create({
-    card: {
+    card: applyShadow({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
         padding: 12,
         borderRadius: 10,
         marginBottom: 10,
-    },
+    }),
     line: {
         textAlign: 'center'
     },

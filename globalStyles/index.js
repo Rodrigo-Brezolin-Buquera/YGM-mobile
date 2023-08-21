@@ -9,6 +9,22 @@ export const colors = {
     white: "#fafafa",
 }
 
+
+const shadowStyles = {
+    shadowColor: '#000',
+    shadowOffset: {
+        width: 0,
+        height: 2,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 3.84,
+    elevation: 5,
+};
+
+export const applyShadow = (style) => {
+    return { ...style, ...shadowStyles };
+};
+
 export default StyleSheet.create({
     container: {
         flex: 1,
@@ -32,20 +48,12 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
-    button: {
+    button: applyShadow({
         backgroundColor: colors.yellow,
         padding: 10,
         borderRadius: 10,
         alignItems: 'center',
-        shadowColor: '#000', 
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.3,
-        shadowRadius: 3.84,
-        elevation: 5,
-    },
+    }),
     buttonText: {
         color: colors.black,
         fontWeight: 'bold',
@@ -82,6 +90,16 @@ export default StyleSheet.create({
     modalOverlay: {
         flex: 1,
         backgroundColor: 'rgba(0, 0, 0, 0.5)'
+    },
+    shadowStyles: {
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.3,
+        shadowRadius: 3.84,
+        elevation: 5,
     }
 
 

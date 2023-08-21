@@ -18,7 +18,7 @@ const Agenda = ({ navigation }) => {
       case 'today':
         return <AvailableClasses navigation={navigation} />
       case 'week':
-        return <Calendar/>;
+        return <Calendar navigation={navigation}/>;
       default:
         return <AvailableClasses />;
     }

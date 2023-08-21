@@ -7,7 +7,7 @@ import { getSundayOfCurrentWeek, getDatesOfWeek } from '../../../utils/dates';
 import DayColumn from './DayColumn';
 import { styles } from './styles';
 
-const Calendar = ({ setSelected, loading }) => {
+const Calendar = ({ loading, navigation }) => {
     const [sunday, setSunday] = useState(getSundayOfCurrentWeek());
     const [datesOfWeek, setDatesOfWeek] = useState(getDatesOfWeek(sunday));
     const [yogaClasses, setYogaClasses] = useState(mockClasses);
@@ -31,7 +31,7 @@ const Calendar = ({ setSelected, loading }) => {
             date={item.date}
             yogaClasses={item.classes}
             day={item.day}
-            setSelected={setSelected}
+            navigation={navigation}
         />
     );
 
@@ -44,8 +44,19 @@ const Calendar = ({ setSelected, loading }) => {
 
 
     return (
-        <GestureHandlerRootView>
-            <View style={globalStyles.buttonContainer}  >
+        <View style={styles.flexView}>
+           
+            <GestureHandlerRootView style={styles.flexView}>
+                <FlatList
+                    data={flatListData}
+                    renderItem={renderItem}
+                    keyExtractor={(item) => item.key}
+                    horizontal={true}
+                    contentContainerStyle={styles.calendarContainer}
+                />
+            </GestureHandlerRootView>
+
+            <View style={styles.buttonContainer}  >
                 <TouchableOpacity
                     style={globalStyles.button}
                     onPress={handlePreviousWeekClick}
@@ -59,16 +70,7 @@ const Calendar = ({ setSelected, loading }) => {
                     <Text style={globalStyles.buttonText}>Próxima</Text>
                 </TouchableOpacity>
             </View>
-
-
-            <FlatList
-                data={flatListData}
-                renderItem={renderItem}
-                keyExtractor={(item) => item.key}
-                horizontal={true}
-                contentContainerStyle={styles.calendarContainer}
-            /> 
-        </GestureHandlerRootView>
+        </View>
     );
 };
 

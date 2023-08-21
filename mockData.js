@@ -2,7 +2,7 @@ export const mockClasses = [
     {
         capacity: 16,
         date: "18/08/2023",
-        day: "Terça",
+        day: "Segunda",
         groupId: "2023-06-16-17:56-Hatha",
         id: "JYnMJsfqi8c9VF1fNcan",
         name: "Hatha",
