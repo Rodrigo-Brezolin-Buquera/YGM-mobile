@@ -47,6 +47,7 @@ export default StyleSheet.create({
         paddingHorizontal: 40,
         width: "100%"
     },
+
     button: applyShadow({
         backgroundColor: colors.yellow,
         padding: 10,
@@ -60,10 +61,16 @@ export default StyleSheet.create({
     },
     input: {
         marginBottom: 10,
-        padding: 10,
         borderColor: '#333',
         borderWidth: 1,
         borderRadius: 10,
+        minHeight:50,
+        display:"flex",
+        justifyContent:"center"
+    },
+    inputText: {
+        paddingLeft:18,
+        fontSize: 16
     },
     modalContainer: {
         position: 'absolute',

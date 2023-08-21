@@ -1,10 +1,10 @@
 export const planOptions = [
-    { value: '1x-Mensal' },
-    { value: '1x-Trimestral' },
-    { value: '2x-Mensal' },
-    { value: '2x-Semestral' },
-    { value: '2x-Trimestral' },
-    { value: 'Avulso' },
-    { value: 'Gympass' },
-    { value: 'TotalPass' },
+    '1x-Mensal' ,
+    '1x-Trimestral' ,
+    '2x-Mensal' ,
+    '2x-Semestral' ,
+    '2x-Trimestral' ,
+    'Avulso' ,
+    'Gympass' ,
+    'TotalPass' ,
 ];

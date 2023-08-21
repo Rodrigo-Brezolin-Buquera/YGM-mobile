@@ -13,11 +13,11 @@ const LoginForm = ({ navigation }) => {
             <View style={styles.form}>
                 <TextInput
                     placeholder="Email"
-                    style={globalStyles.input}
+                    style={styles.input}
                 />
                 <TextInput
                     placeholder="Senha"
-                    style={globalStyles.input}
+                    style={styles.input}
                     secureTextEntry={!showPassword}
                 />
                 <TouchableOpacity

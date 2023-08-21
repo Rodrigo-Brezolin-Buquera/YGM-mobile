@@ -3,7 +3,10 @@ import { Text, Modal, View, TouchableOpacity, TextInput, Button } from 'react-na
 import globalStyles from '../../../globalStyles'
 import { getToday } from '../../../utils/dates';
 import DateTimePicker from '@react-native-community/datetimepicker';
-
+import SelectPicker from '../../../components/SelectPicker';
+import { dayOptions } from '../../../constants/dayOptions';
+import { stylesOptions } from '../../../constants/stylesOptions';
+import { teachersOptions } from '../../../constants/teachersOptions';
 
 
 const CreateClassModal = ({ isModalVisible, toggleModal, navigation }) => {
@@ -12,6 +15,9 @@ const CreateClassModal = ({ isModalVisible, toggleModal, navigation }) => {
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [selectedTime, setSelectedTime] = useState(new Date());
   const [showTimePicker, setShowTimePicker] = useState(false);
+  const [style, setStyle] = useState(null);
+  const [teacher, setTeacher] = useState(null);
+  const [day, setDay] = useState(null);
 
 
   const handleDateChange = (event, selected) => {
@@ -43,7 +49,34 @@ const CreateClassModal = ({ isModalVisible, toggleModal, navigation }) => {
           <View style={globalStyles.modalForm}>
             <Text style={globalStyles.modalHeader}>Detalhes da aula</Text>
 
-            <Button title="Select Date" onPress={() => setShowDatePicker(true)} />
+            <SelectPicker
+              state={day}
+              setState={setDay}
+              list={dayOptions}
+              placeholder={"Escolha um dia"}
+            />
+
+            <SelectPicker
+              state={style}
+              setState={setStyle}
+              list={stylesOptions}
+              placeholder={"Escolha um estilo"}
+            />
+
+            <SelectPicker
+              state={teacher}
+              setState={setTeacher}
+              list={teachersOptions}
+              placeholder={"Escolha um professor"}
+            />
+
+            <TouchableOpacity
+              style={globalStyles.input}
+              onPress={() => setShowDatePicker(true)}
+            >
+              <Text style={globalStyles.inputText}  >   { selectedDate.toISOString() || "Escolha um dia"}</Text>
+            </TouchableOpacity>
+            
             {showDatePicker && (
               <DateTimePicker
                 value={selectedDate}
@@ -51,10 +84,18 @@ const CreateClassModal = ({ isModalVisible, toggleModal, navigation }) => {
                 is24Hour={true}
                 display="default"
                 onChange={handleDateChange}
+              // minimumDate={}
+              // maximumDate
               />
             )}
 
-            <Button title="Select Time" onPress={() => setShowTimePicker(true)} />
+            <TouchableOpacity
+              style={globalStyles.input}
+              onPress={() => setShowTimePicker(true)}
+            >
+              <Text style={globalStyles.inputText}  >Escolha um horário</Text>
+            </TouchableOpacity>
+
             {showTimePicker && (
               <DateTimePicker
                 value={selectedTime}

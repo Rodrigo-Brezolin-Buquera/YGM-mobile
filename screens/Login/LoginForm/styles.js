@@ -16,7 +16,13 @@ export default StyleSheet.create({
     form: {
         width: '100%',
     },
- 
+    input:{
+        marginBottom: 10,
+        padding: 10,
+        borderColor: '#333',
+        borderWidth: 1,
+        borderRadius: 10,
+    },
     errorMessage: {
         color: 'red',
         marginTop: 10,
