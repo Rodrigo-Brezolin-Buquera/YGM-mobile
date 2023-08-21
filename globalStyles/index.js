@@ -9,7 +9,6 @@ export const colors = {
     white: "#fafafa",
 }
 
-
 const shadowStyles = {
     shadowColor: '#000',
     shadowOffset: {
@@ -24,6 +23,12 @@ const shadowStyles = {
 export const applyShadow = (style) => {
     return { ...style, ...shadowStyles };
 };
+
+export const selectedButtonStyle = (boolean) => {
+    return { backgroundColor: boolean ? colors.lightCian : colors.yellow}
+
+} 
+
 
 export default StyleSheet.create({
     container: {
@@ -41,12 +46,6 @@ export default StyleSheet.create({
         marginVertical: 20,
         paddingHorizontal: 40,
         width: "100%"
-    },
-    centerView: {
-        flex: 1,
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center'
     },
     button: applyShadow({
         backgroundColor: colors.yellow,
@@ -90,17 +89,5 @@ export default StyleSheet.create({
     modalOverlay: {
         flex: 1,
         backgroundColor: 'rgba(0, 0, 0, 0.5)'
-    },
-    shadowStyles: {
-        shadowColor: '#000',
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.3,
-        shadowRadius: 3.84,
-        elevation: 5,
     }
-
-
 });

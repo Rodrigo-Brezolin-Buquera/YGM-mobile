@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Text, View, TouchableOpacity } from 'react-native'
-import globalStyles, { colors } from '../../globalStyles'
+import globalStyles, { selectedButtonStyle } from '../../globalStyles'
 import AvailableClasses from './AvailableClasses.js';
 import Calendar from './Calendar';
 import CreateClassModal from './CreateClassModal.js';
@@ -40,7 +40,7 @@ const Agenda = ({ navigation }) => {
         <TouchableOpacity
           style={[
             globalStyles.button,
-            { backgroundColor: view === "today" ? colors.lightCian : globalStyles.button.backgroundColor }
+            selectedButtonStyle(view === "today")
           ]}
           onPress={() => setView('today')}
         >
@@ -50,7 +50,7 @@ const Agenda = ({ navigation }) => {
         <TouchableOpacity
           style={[
             globalStyles.button,
-            { backgroundColor: view === "week" ? colors.lightCian : globalStyles.button.backgroundColor }
+            selectedButtonStyle(view === "week")
           ]}
           onPress={() => setView('week')}
         >

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Text, View, TouchableOpacity } from 'react-native'
-import globalStyles, { colors } from '../../globalStyles'
+import globalStyles, { selectedButtonStyle } from '../../globalStyles'
 import ContractList from './ContractList';
 import UserList from './UserList';
 
@@ -24,7 +24,7 @@ const Admin = () => {
         <TouchableOpacity
           style={[
             globalStyles.button,
-            { backgroundColor: view === "users" ? colors.lightCian : globalStyles.button.backgroundColor }
+            selectedButtonStyle(view === "users")
           ]}
           onPress={() => setView('users')}
         >
@@ -34,7 +34,7 @@ const Admin = () => {
         <TouchableOpacity
            style={[
             globalStyles.button,
-            { backgroundColor: view === "contracts" ? colors.lightCian : globalStyles.button.backgroundColor }
+            selectedButtonStyle(view === "contracts")
           ]}
           onPress={() => setView('contracts')}
         >

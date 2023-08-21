@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../globalStyles';
+import { applyShadow, colors } from '../../globalStyles';
 
 
 export const styles = StyleSheet.create({
-    card: {
+    card: applyShadow({
       flexDirection: 'column',
       padding: 8,
       borderRadius: 10,
@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
       backgroundColor: colors.white, 
       gap:2,
       marginVertical:4
-    },
+    }),
     line: {
       flexDirection: 'row',
       justifyContent: 'flex-start',
