@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Text, View, TouchableOpacity } from 'react-native'
 import globalStyles, { colors } from '../../globalStyles'
 import AvailableClasses from './AvailableClasses.js';
+import Calendar from './Calendar';
 import CreateClassModal from './CreateClassModal.js';
 
 const Agenda = ({ navigation }) => {
@@ -17,7 +18,7 @@ const Agenda = ({ navigation }) => {
       case 'today':
         return <AvailableClasses navigation={navigation} />
       case 'week':
-        return <Text>Calendar</Text>;
+        return <Calendar/>;
       default:
         return <AvailableClasses />;
     }
