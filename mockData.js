@@ -120,7 +120,7 @@ export const mockPlans = [
       frequency: '1x',
       type: 'Mensal',
       id: '1x-Mensal',
-      price: 50.00,
+      price: "R$ 50,00",
     },
     {
       durationInMonths: 3,
@@ -128,7 +128,7 @@ export const mockPlans = [
       type: 'Trimestral',
       frequency: '1x',
       id: '1x-Trimestral',
-      price: 120.00,
+      price: "R$ 120,00",
     },
     {
       durationInMonths: 1,
@@ -136,7 +136,7 @@ export const mockPlans = [
       type: 'Mensal',
       frequency: '2x',
       id: '2x-Mensal',
-      price: 80.00,
+      price: "R$ 80,00",
     },
     {
       durationInMonths: 6,
@@ -144,7 +144,7 @@ export const mockPlans = [
       type: 'Semestral',
       frequency: '2x',
       id: '2x-Semestral',
-      price: 300.00,
+      price: "R$ 300,00",
     },
     {
       durationInMonths: 3,
@@ -152,12 +152,12 @@ export const mockPlans = [
       type: 'Trimestral',
       frequency: '2x',
       id: '2x-Trimestral',
-      price: 150.00,
+      price: "R$ 150,00",
     },
     {
       id: 'Avulso',
       type: 'Avulso',
-      price: 20.00,
+      price: "R$ 20,00",
     },
     {
       id: 'Gympass',

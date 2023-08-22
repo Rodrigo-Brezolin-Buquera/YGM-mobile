@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
-import globalStyles from '../../globalStyles';
 import { styles } from './styles';
 
-const DoubleClickText = (props) => {
+const LongPressText = (props) => {
   const [text, setText] = useState('');
   const [showInput, setShowInput] = useState(false);
 
@@ -21,12 +20,11 @@ const DoubleClickText = (props) => {
     <View>
       {showInput ? (
         <TextInput
-          style={globalStyles.input}
+          style={styles.input}
           value={text}
           onChangeText={onChange}
           onBlur={() => setShowInput(false)}
           onLongPress={handleKeyPress} // ver como é para aprovar o texto
-          autoFocus={true}
         />
       ) : (
         <TouchableOpacity onLongPress={() => setShowInput(true)}>
@@ -39,4 +37,4 @@ const DoubleClickText = (props) => {
   );
 };
 
-export default DoubleClickText;
+export default LongPressText;

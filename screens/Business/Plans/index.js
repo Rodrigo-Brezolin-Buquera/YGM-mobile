@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { Text, View, Image } from 'react-native';
 import { mockPlans } from '../../../mockData';
 import globalStyles from '../../../globalStyles';
-import DoubleClickText from '../../../components/DoubleClickText';
+import LongPressText from '../../../components/LongPressText';
+import { styles } from './styles';
 // import { TextCard } from '../../theme';
 // import { PlanForm } from './PlanForm';
 
@@ -20,11 +21,10 @@ export const Plans = () => {
 
     const list = plans.map((plan) => {
         return (
-            <View key={plan.id} style={{ marginBottom: 10 }}>
-            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-                <View>
-                     <Text style={{ fontWeight: 'bold' }}>{plan.id}</Text> 
-                     <DoubleClickText
+            <View key={plan.id}   style={styles.card}>
+                <View style={styles.textContainer}>
+                     <Text style={styles.label}>{plan.id}</Text> 
+                     <LongPressText
                         //   itemCol={plansCol}
                         id={plan.id}
                         atribute={'price'}
@@ -34,10 +34,10 @@ export const Plans = () => {
                 </View>
                 <Image
                     onPress={() => onDelete(plan.id)}
+                    style={styles.icon}
                     source={require('../../../assets/trashIcon.png')}
                     />
             </View>
-        </View>
     );
 })
      

@@ -57,7 +57,6 @@ export default StyleSheet.create({
         paddingHorizontal: 40,
         width: "100%"
     },
-
     button: applyShadow({
         backgroundColor: colors.yellow,
         padding: 10,
@@ -78,7 +77,6 @@ export default StyleSheet.create({
         display:"flex",
         justifyContent:"center",
         paddingLeft:4
-
     },
     inputText: {
         paddingLeft:18,

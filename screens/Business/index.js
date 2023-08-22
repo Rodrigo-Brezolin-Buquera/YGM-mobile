@@ -17,7 +17,7 @@ const Business = () => {
         case 'plans':
         return <Plans/>
       default:
-        return <Text>nada</Text>
+        return null
     }
   };
 
