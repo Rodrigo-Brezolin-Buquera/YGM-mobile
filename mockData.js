@@ -112,3 +112,63 @@ export const mockTeachers = [
      { name: 'Rodrigo', id: '0ARvEwLLdkz1aDFRev3F' },
      { name: 'Louize', id: 'ey6DPNnaOaAG1LvTrvmb' }
 ]
+
+export const mockPlans = [
+    {
+      availableClasses: 4,
+      durationInMonths: 1,
+      frequency: '1x',
+      type: 'Mensal',
+      id: '1x-Mensal',
+      price: 50.00,
+    },
+    {
+      durationInMonths: 3,
+      availableClasses: 12,
+      type: 'Trimestral',
+      frequency: '1x',
+      id: '1x-Trimestral',
+      price: 120.00,
+    },
+    {
+      durationInMonths: 1,
+      availableClasses: 8,
+      type: 'Mensal',
+      frequency: '2x',
+      id: '2x-Mensal',
+      price: 80.00,
+    },
+    {
+      durationInMonths: 6,
+      availableClasses: 48,
+      type: 'Semestral',
+      frequency: '2x',
+      id: '2x-Semestral',
+      price: 300.00,
+    },
+    {
+      durationInMonths: 3,
+      availableClasses: 24,
+      type: 'Trimestral',
+      frequency: '2x',
+      id: '2x-Trimestral',
+      price: 150.00,
+    },
+    {
+      id: 'Avulso',
+      type: 'Avulso',
+      price: 20.00,
+    },
+    {
+      id: 'Gympass',
+      type: 'Gympass',
+    
+    },
+    {
+      id: 'TotalPass',
+      type: 'TotalPass',
+   
+    },
+  ];
+  
+  

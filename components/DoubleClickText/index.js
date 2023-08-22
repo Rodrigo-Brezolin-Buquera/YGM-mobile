@@ -30,7 +30,7 @@ const DoubleClickText = (props) => {
         />
       ) : (
         <TouchableOpacity onLongPress={() => setShowInput(true)}>
-          <Text  style={styles.text}>
+          <Text  style={styles.text} >
             {text}
           </Text>
         </TouchableOpacity>

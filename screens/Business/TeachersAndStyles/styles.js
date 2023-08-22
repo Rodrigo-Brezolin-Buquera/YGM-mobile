@@ -3,20 +3,9 @@ import { colors } from '../../../globalStyles';
 
 
 export const styles = StyleSheet.create({
-    wrapContainer: {
-      display: 'flex',
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      justifyContent: 'flex-start',
-      width: '100%',
-      padding: 10,
-      marginVertical: 8,
-      marginHorizontal: 16,
-    }, 
-    centralContariner: {
+     centralContainer: {
       width: '100%',
       paddingHorizontal:20
-
     },
     card: {
       minWidth: 100,

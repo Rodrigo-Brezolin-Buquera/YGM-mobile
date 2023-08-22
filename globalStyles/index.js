@@ -40,6 +40,16 @@ export default StyleSheet.create({
         backgroundColor: colors.grey,
         minHeight: '100%',
     },
+    wrapContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'flex-start',
+        width: '100%',
+        padding: 10,
+        marginVertical: 8,
+        marginHorizontal: 16,
+      }, 
     buttonContainer:{
         flexDirection: 'row',
         justifyContent: 'space-around',

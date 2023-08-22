@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, TouchableOpacity, Image } from 'react-native';
 import RequestInput from '../../../components/RequestInput';
+import globalStyles from '../../../globalStyles';
 import { mockStyles, mockTeachers } from '../../../mockData';
 import { styles } from './styles';
 
@@ -38,7 +39,7 @@ const TeachersAndStyles = () => {
             );
 
     return (
-        <View style={styles.centralContariner}>
+        <View style={styles.centralContainer}>
             <Text style={styles.label}>Professores</Text>
 
             <RequestInput
@@ -46,7 +47,7 @@ const TeachersAndStyles = () => {
                 setLoading={setLoading}
                 placeholder={'Adicione uma pessoa'}
             />
-            <View style={styles.wrapContainer}>
+            <View style={globalStyles.wrapContainer}>
                 {renderList(teachers)}
             </View>
             <Text style={styles.label}>Estilos</Text>
@@ -58,7 +59,7 @@ const TeachersAndStyles = () => {
             />
 
             <View
-                style={styles.wrapContainer}
+                style={globalStyles.wrapContainer}
             >{renderList(classStyles)}</View>
         </View>
     );
