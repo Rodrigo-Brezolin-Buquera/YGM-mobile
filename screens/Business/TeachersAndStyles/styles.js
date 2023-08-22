@@ -40,6 +40,10 @@ export const styles = StyleSheet.create({
     cardText:{
       fontSize:14,
       fontWeight:"bold",
-    }
+    }, 
+    icon:{
+      width:20,
+      height:20
+  },
 
   });

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity, Image } from 'react-native';
 import RequestInput from '../../../components/RequestInput';
 import { mockStyles, mockTeachers } from '../../../mockData';
 import { styles } from './styles';
@@ -24,7 +24,10 @@ const TeachersAndStyles = () => {
                 >
                     <Text style={styles.cardText}>{item.name} </Text>
 
-                    <Text style={styles.cardText}> X </Text>
+                    <Image 
+                    source={require("../../../assets/trashIcon.png")} 
+                    style={styles.icon}
+                    />
                 </TouchableOpacity>
             )
             )
