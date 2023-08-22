@@ -99,3 +99,16 @@ export const mockLocal = {
     facebook: "yogamangalasorocaba",
     instagram: "yoga_mangala",
   };
+
+
+export const mockStyles = [
+  { name: 'Hatha', id: '7RuNSX0A47dM0azokEbs' },
+  { name: 'Restaurativo', id: 'VuU2h0TQbKdic61tj8cP' },
+  { name: 'Vinyasa Flow', id: 'bmwyRZrE0ApatmbRURnG' }
+];
+
+
+export const mockTeachers = [
+     { name: 'Rodrigo', id: '0ARvEwLLdkz1aDFRev3F' },
+     { name: 'Louize', id: 'ey6DPNnaOaAG1LvTrvmb' }
+]
