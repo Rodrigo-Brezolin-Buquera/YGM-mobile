@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../../globalStyles';
+import { applyShadow, colors } from '../../../globalStyles';
 
 
 export const styles = StyleSheet.create({
-    card: {
+    card: applyShadow({
         width: 160,
         height: 70,
         display: "flex",
@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
         borderRadius: 20,
         marginHorizontal: 5,
         marginVertical: 5
-    },
+    }),
     textContainer: {
         flex: 1,
         flexDirection: "column",
@@ -31,6 +31,15 @@ export const styles = StyleSheet.create({
     label:{
         fontSize:15,
         fontWeight: 'bold' 
-    }
+    },
+    columnContainer: {
+        flex: 1,
+        flexDirection: "column",
+        justifyContent: "space-between",
+        alignItems: "center",
+        height: "100%",
+        paddingBottom: 10
+      
+    },
 
 });

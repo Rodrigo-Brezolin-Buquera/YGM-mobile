@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Text, Modal, View, TouchableOpacity, TextInput, Button } from 'react-native'
+import { Text, Modal, View, TouchableOpacity} from 'react-native'
 import globalStyles from '../../../globalStyles'
 import { getToday } from '../../../utils/dates';
 import DateTimePicker from '@react-native-community/datetimepicker';

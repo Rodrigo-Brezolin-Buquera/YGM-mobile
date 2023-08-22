@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../../globalStyles';
+import { applyShadow, colors } from '../../../globalStyles';
 
 
 export const styles = StyleSheet.create({
@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
       width: '100%',
       paddingHorizontal:20
     },
-    card: {
+    card: applyShadow({
       minWidth: 100,
       minHeight: 40,
       display: "flex",
@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
       borderRadius: 20,
       marginHorizontal:10,
       marginVertical:5
-    },
+    }),
     label:{
       fontSize:16,
       fontWeight:"bold",
