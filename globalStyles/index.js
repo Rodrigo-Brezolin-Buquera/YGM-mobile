@@ -66,7 +66,9 @@ export default StyleSheet.create({
         borderRadius: 10,
         minHeight:50,
         display:"flex",
-        justifyContent:"center"
+        justifyContent:"center",
+        paddingLeft:4
+
     },
     inputText: {
         paddingLeft:18,

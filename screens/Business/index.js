@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import { Text, View, TouchableOpacity } from 'react-native'
 import globalStyles, { selectedButtonStyle } from '../../globalStyles'
+import Local from './Local';
 
 const Business = () => {
   const [view, setView] = useState(null);
@@ -8,7 +9,7 @@ const Business = () => {
   const BusinessView = () => {
     switch (view) {
       case 'local':
-        return  <Text>Local</Text>
+        return  <Local/>
       case 'teacher/styles':
         return <Text>teacher/styles</Text>
         case 'plans':
@@ -38,7 +39,7 @@ const Business = () => {
           ]}
           onPress={() => setView('teacher/styles')}
         >
-          <Text style={globalStyles.buttonText}  >teacher/styles</Text>
+          <Text style={globalStyles.buttonText}  >Estilos</Text>
         </TouchableOpacity >
 
         <TouchableOpacity

@@ -88,3 +88,14 @@ export const mockUsers = [
     }
 
 ]
+export const mockLocal = {
+    id: "main",
+    address: "Rua Luiz Silva Rodrigues, 299 Vila Independência - Sorocaba/SP",
+    email: "contato@yogamangala.com.br",
+    phone: "(15) 98130-2549",
+    whatsapp: "5515981302549",
+    maxCapacity: "16",
+    website: "https://yogamangala.com.br/",
+    facebook: "yogamangalasorocaba",
+    instagram: "yoga_mangala",
+  };
