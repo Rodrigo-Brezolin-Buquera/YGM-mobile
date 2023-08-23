@@ -13,11 +13,6 @@ export const styles = StyleSheet.create({
       gap:2,
       marginVertical:4
     }),
-    line: {
-      flexDirection: 'row',
-      justifyContent: 'flex-start',
-      gap: 4 
-    },
     label: {
       fontWeight: 'bold',
       fontSize:18

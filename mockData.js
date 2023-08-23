@@ -10,7 +10,7 @@ export const mockClasses = [
         time: "17:56"
     },
     {
-        capacity: 16,
+        capacity: 0,
         date: "18/08/2023",
         day: "Terça",
         groupId: "2023-06-16-17:56-Hatha",
@@ -171,4 +171,16 @@ export const mockPlans = [
     },
   ];
   
+
+  export const mockCheckins = [
+     {
+      id: "13E5w8oKl2U6MUUnC8tHadEaDjh1+5lxRhGcp3INshOdhSddV",
+      contractId: "13E5w8oKl2U6MUUnC8tHadEaDjh1",
+      date: "08/07/2023",
+      name: "Stefanie",
+      time: "09:00",
+      yogaClassId: "5lxRhGcp3INshOdhSddV"
+    },
+  
+  ]
   

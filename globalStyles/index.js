@@ -106,5 +106,10 @@ export default StyleSheet.create({
     modalOverlay: {
         flex: 1,
         backgroundColor: 'rgba(0, 0, 0, 0.5)'
-    }
+    },
+    line: {
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        gap: 4 
+      },
 });

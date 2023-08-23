@@ -2,8 +2,8 @@ export const goToAdmin = (navigation) => {
     navigation.navigate("Admin",  { replace: true });
 }
 
-export const goToUser = (navigation) => {
-    navigation.navigate("Admin",  { replace: true });
+export const goToUser = (navigation, id) => {
+    navigation.navigate("User",  {id, replace: true });
 }
 
 export const goToClass = (navigation, id) => {
