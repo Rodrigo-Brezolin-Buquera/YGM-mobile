@@ -3,6 +3,8 @@ import Header from "../../components/Header"
 import { Text, View, TouchableOpacity } from 'react-native'
 import globalStyles, { selectedButtonStyle } from '../../globalStyles'
 import AvailableClasses from './AvailableClasses.js'
+import ContractDetails from '../../components/ContractDetails'
+import { mockContracts, mockUsers } from '../../mockData'
 
 const User = () => {
   const [view, setView] = useState("classes");
@@ -13,13 +15,11 @@ const User = () => {
       case 'classes':
         return <AvailableClasses/>
       case 'account':
-        return <Text>account</Text>
+        return <ContractDetails  contract={mockContracts[1] }/>
       default:
         return <Text>Classes</Text>;
     }
   };
-
-
 
   return (
     <View style={globalStyles.container} >

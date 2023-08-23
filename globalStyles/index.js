@@ -25,9 +25,9 @@ export const applyShadow = (style) => {
 };
 
 export const selectedButtonStyle = (boolean) => {
-    return { backgroundColor: boolean ? colors.lightCian : colors.yellow}
+    return { backgroundColor: boolean ? colors.lightCian : colors.yellow }
 
-} 
+}
 
 
 export default StyleSheet.create({
@@ -49,8 +49,8 @@ export default StyleSheet.create({
         padding: 10,
         marginVertical: 8,
         marginHorizontal: 16,
-      }, 
-    buttonContainer:{
+    },
+    buttonContainer: {
         flexDirection: 'row',
         justifyContent: 'space-around',
         marginVertical: 20,
@@ -66,20 +66,20 @@ export default StyleSheet.create({
     buttonText: {
         color: colors.black,
         fontWeight: 'bold',
-        fontSize:18
+        fontSize: 18
     },
     input: {
         marginBottom: 10,
         borderColor: '#333',
         borderWidth: 1,
         borderRadius: 10,
-        minHeight:50,
-        display:"flex",
-        justifyContent:"center",
-        paddingLeft:4,
+        minHeight: 50,
+        display: "flex",
+        justifyContent: "center",
+        paddingLeft: 4,
     },
     inputText: {
-        paddingLeft:18,
+        paddingLeft: 18,
         fontSize: 16
     },
     modalContainer: {
@@ -95,7 +95,7 @@ export default StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         marginBottom: 10,
-        textAlign: 'center' 
+        textAlign: 'center'
     },
     modalForm: {
         width: '80%',
@@ -110,6 +110,13 @@ export default StyleSheet.create({
     line: {
         flexDirection: 'row',
         justifyContent: 'flex-start',
-        gap: 4 
-      },
+        gap: 4
+    },
+    boldText: {
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
+    normalText: {
+        fontSize: 18,
+    },
 });
