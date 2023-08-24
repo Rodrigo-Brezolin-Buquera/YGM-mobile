@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { TouchableOpacity, Text, View } from 'react-native';
-import { goToContract } from '../../../Router/Coordinator';
+import { goToContract } from '../../../router/Coordinator';
 import { styles } from '../styles';
 
 const UserCard = ({ user, navigation }) => {

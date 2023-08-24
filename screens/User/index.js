@@ -4,7 +4,7 @@ import { Text, View, TouchableOpacity } from 'react-native'
 import globalStyles, { selectedButtonStyle } from '../../globalStyles'
 import AvailableClasses from './AvailableClasses.js'
 import ContractDetails from '../../components/ContractDetails'
-import { mockContracts, mockUsers } from '../../mockData'
+import { mockContracts } from '../../mockData'
 
 const User = () => {
   const [view, setView] = useState("classes");

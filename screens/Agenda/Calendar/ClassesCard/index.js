@@ -1,8 +1,7 @@
-import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 import { memo } from 'react';
 import { agendaStyles } from '../../agendaStyles';
-import { goToClass } from '../../../../Router/Coordinator';
+import { goToClass } from '../../../../router/Coordinator';
 import { styles } from './styles';
 
 const ClassCard = ({ yogaClass, navigation }) => {

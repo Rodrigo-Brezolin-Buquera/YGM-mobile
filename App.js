@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import AreaView from './components/AreaView';
-import Routes from './Router/Routes';
+import Routes from './router/Routes';
 
 export default function App() {
   return (

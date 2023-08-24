@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { mockClasses } from '../../../mockData';
-import { goToClass } from '../../../Router/Coordinator';
+import { goToClass } from '../../../router/Coordinator';
 import { styles } from './styles';
 
 const AvailableClasses = ({ navigation }) => {

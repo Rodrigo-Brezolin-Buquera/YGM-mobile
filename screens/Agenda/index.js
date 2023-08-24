@@ -18,7 +18,7 @@ const Agenda = ({ navigation }) => {
       case 'today':
         return <AvailableClasses navigation={navigation} />
       case 'week':
-        return <Calendar navigation={navigation}/>;
+        return <Calendar navigation={navigation} />;
       default:
         return <AvailableClasses />;
     }
@@ -29,9 +29,7 @@ const Agenda = ({ navigation }) => {
     <View style={globalStyles.container} >
       <View style={globalStyles.buttonContainer}>
         <TouchableOpacity
-          style={[
-            globalStyles.button,
-          ]}
+          style={globalStyles.button}
           onPress={toggleModal}
         >
           <Text style={globalStyles.buttonText}  >Nova aula</Text>
@@ -58,7 +56,7 @@ const Agenda = ({ navigation }) => {
         </TouchableOpacity>
       </View>
 
-      <ClassesView/>
+      <ClassesView />
       <CreateClassModal isModalVisible={isModalVisible} toggleModal={toggleModal} navigation={navigation} />
 
     </View>

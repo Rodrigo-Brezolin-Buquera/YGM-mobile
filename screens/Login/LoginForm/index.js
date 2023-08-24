@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import globalStyles from '../../../globalStyles';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import styles from './styles';
-import { goToAdmin, goToUser } from '../../../Router/Coordinator';
+import { goToAdmin, goToUser } from '../../../router/Coordinator';
 
 const LoginForm = ({ navigation }) => {
     const [loading, setLoading] = useState(false);
@@ -22,8 +22,8 @@ const LoginForm = ({ navigation }) => {
                 />
                 <TouchableOpacity
                     style={globalStyles.button}
-                    // onPress={()=>goToAdmin(navigation)}
-                    onPress={()=>goToUser(navigation , 1)}
+                    onPress={()=>goToAdmin(navigation)}
+                    // onPress={()=>goToUser(navigation , 1)}
 
 
                     disabled={loading}
