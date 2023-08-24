@@ -3,18 +3,20 @@ import globalStyles from '../../globalStyles'
 import ContractDetails from "../../components/ContractDetails"
 import { mockContracts } from "../../mockData"
 import { useState } from 'react'
+import CreateContractModal from './CreateContractModal'
 
 const Contract = () => {
-  const [iseModalVisible, seteModalVisible] = useState(false);
+  const [contract, setContract] = useState(mockContracts[1])
+  const [isModalVisible, seteModalVisible] = useState(false);
 
   const toggleModal = () => {
-    seteModalVisible(!iseModalVisible);
+    seteModalVisible(!isModalVisible);
   };
 
   return (
     <View style={globalStyles.container} >
       <View style={globalStyles.buttonContainer}>
-      
+
         <TouchableOpacity
           style={globalStyles.button}
           onPress={toggleModal}
@@ -30,7 +32,11 @@ const Contract = () => {
       </View>
 
 
-      <ContractDetails contract={mockContracts[1]} />
+      <ContractDetails contract={contract} />
+      <CreateContractModal
+        isModalVisible={isModalVisible}
+        toggleModal={toggleModal}
+      />
     </View>
   )
 }

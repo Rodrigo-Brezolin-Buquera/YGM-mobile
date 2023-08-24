@@ -1,17 +1,22 @@
 import { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Modal } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Modal } from 'react-native';
 import SelectPicker from '../../../components/SelectPicker';
 import { planOptions } from '../../../constants/plansOptions';
 import globalStyles from '../../../globalStyles';
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 
-const CreateContractModal = ({ contract }) => {
+const CreateContractModal = ({ isModalVisible, toggleModal }) => {
     const [loading, setLoading] = useState(false);
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [showDatePicker, setShowDatePicker] = useState(false);
     const [plan, setPlan] = useState("");
-    s
 
+    const handleDateChange = (event, selected) => {
+        const currentDate = selected || selectedDate;
+        setShowDatePicker(false);
+        setSelectedDate(currentDate);
+      };
 
     const onSubmit = () => { };
 
@@ -31,14 +36,12 @@ const CreateContractModal = ({ contract }) => {
                     <View style={globalStyles.modalForm}>
                         <Text style={globalStyles.modalHeader}>Novo Contrato</Text>
 
-
                         <SelectPicker
                             state={plan}
                             setState={setPlan}
                             list={planOptions}
                             placeholder={"Escolha um plano"}
                         />
-
 
                         {showDatePicker && (
                             <DateTimePicker
@@ -52,11 +55,19 @@ const CreateContractModal = ({ contract }) => {
                             />
                         )}
 
+                        <TouchableOpacity
+                            style={globalStyles.input}
+                            onPress={() => setShowDatePicker(true)}
+                        >
+                            <Text style={globalStyles.inputText}  >Data de ínicio</Text>
+                        </TouchableOpacity>
+
 
                         <TouchableOpacity
+                            style={globalStyles.button}
                             onPress={onSubmit}
                         >
-                            <Text>Salvar</Text>
+                            <Text style={globalStyles.buttonText} >Salvar</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
