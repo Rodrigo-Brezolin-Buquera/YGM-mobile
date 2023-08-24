@@ -2,16 +2,22 @@ import { useState } from 'react';
 import { FlatList, Text, View, TouchableOpacity } from 'react-native';
 import globalStyles from '../../../globalStyles';
 import { mockCheckins } from '../../../mockData';
+import AddCheckinModal from './AddCheckinModal';
 import CheckinCard from './CheckinCard';
 import { styles } from './styles';
 
 const CheckinList = () => {
     const [list, setList] = useState(mockCheckins)
+    const [isModalVisible, setModalVisible] = useState(false);
 
+    const toggleModal = () => {
+      setModalVisible(!isModalVisible);
+    };
+  
 
     const AddCheckinButton = () => {
         return (
-            <TouchableOpacity style={styles.cardButton} onPress={() => { }}>
+            <TouchableOpacity style={styles.cardButton} onPress={toggleModal}>
                 <Text style={globalStyles.buttonText}>Adicionar pessoa</Text>
             </TouchableOpacity>
         );
@@ -40,7 +46,7 @@ const CheckinList = () => {
 
             }
 
-
+            <AddCheckinModal isModalVisible={isModalVisible} toggleModal={toggleModal}/>
         </View>
     );
 };
