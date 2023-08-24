@@ -181,6 +181,15 @@ export const mockPlans = [
       time: "09:00",
       yogaClassId: "5lxRhGcp3INshOdhSddV"
     },
+    {
+      id: "13E5w8oKl2U6MUUnC8tHadEaDjh1+5lxRhGcp3INshOdhSddV1",
+      contractId: "13E5w8oKl2U6MUUnC8tHadEaDjh1",
+      date: "08/07/2023",
+      name: "Pedro S. Marcos da Cruz",
+      time: "09:00",
+      yogaClassId: "5lxRhGcp3INshOdhSddV"
+    }
+    
   
   ]
   

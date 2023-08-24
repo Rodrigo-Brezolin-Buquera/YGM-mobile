@@ -38,7 +38,7 @@ export default StyleSheet.create({
         paddingBottom: '10em',
         justifyContent: 'flex-start',
         backgroundColor: colors.grey,
-        minHeight: '100%',
+        // minHeight: '100%',
     },
     wrapContainer: {
         display: 'flex',

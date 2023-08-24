@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import globalStyles from '../../../globalStyles';
 import { simplifyDate } from '../../../utils/dates';
-import styles from './styles';
+import {styles} from './styles';
 
 const ClassDetails = ({ yogaClass }) => {
   return (
