@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Text, View, TouchableOpacity } from 'react-native'
-import globalStyles, { selectedButtonStyle } from '../../globalStyles'
+import globalStyles, { selectedButtonStyle, selectedTabButtonStyle, selectedTabButtonTextStyle } from '../../globalStyles'
 import ContractList from './ContractList';
 import UserList from './UserList';
 
@@ -12,7 +12,7 @@ const Admin = () => {
       case 'users':
         return <UserList />
       case 'contracts':
-        return <ContractList/>;
+        return <ContractList />;
       default:
         return null;
     }
@@ -20,25 +20,32 @@ const Admin = () => {
 
   return (
     <View style={globalStyles.container} >
-      <View style={globalStyles.buttonContainer}>
+      <View style={globalStyles.tabContainer}>
         <TouchableOpacity
           style={[
-            globalStyles.button,
-            selectedButtonStyle(view === "users")
+            globalStyles.tabButton,
+            selectedTabButtonStyle(view === "users")
           ]}
           onPress={() => setView('users')}
         >
-          <Text style={globalStyles.buttonText}  >Ativar contas</Text>
+          <Text style={[
+            globalStyles.tabButtonText,
+            selectedTabButtonTextStyle(view === "users")
+          ]}  >Ativar contas</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-           style={[
-            globalStyles.button,
-            selectedButtonStyle(view === "contracts")
+          style={[
+            globalStyles.tabButton,
+            selectedTabButtonStyle(view === "contracts")
           ]}
           onPress={() => setView('contracts')}
         >
-          <Text style={globalStyles.buttonText}  >Usuários</Text>
+          <Text style={[
+            globalStyles.tabButtonText,
+            selectedTabButtonTextStyle(view === "contracts")
+
+            ]}  >Usuários</Text>
         </TouchableOpacity>
       </View>
 

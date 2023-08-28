@@ -61,13 +61,13 @@ const Calendar = ({ loading, navigation }) => {
                     style={globalStyles.button}
                     onPress={handlePreviousWeekClick}
                 >
-                    <Text style={globalStyles.buttonText}>Anterior</Text>
+                    <Text style={globalStyles.buttonText}>Semana Anterior </Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={globalStyles.button}
                     onPress={handleNextWeekClick}
                 >
-                    <Text style={globalStyles.buttonText}>Próxima</Text>
+                    <Text style={globalStyles.buttonText}>Próxima semana</Text>
                 </TouchableOpacity>
             </View>
         </View>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Text, View, TouchableOpacity } from 'react-native'
-import globalStyles, { selectedButtonStyle } from '../../globalStyles'
+import globalStyles, { selectedButtonStyle, selectedTabButtonStyle, selectedTabButtonTextStyle } from '../../globalStyles'
+import { agendaStyles } from './agendaStyles';
 import AvailableClasses from './AvailableClasses.js';
 import Calendar from './Calendar';
 import CreateClassModal from './CreateClassModal.js';
@@ -27,38 +28,47 @@ const Agenda = ({ navigation }) => {
 
   return (
     <View style={globalStyles.container} >
-      <View style={globalStyles.buttonContainer}>
-        <TouchableOpacity
-          style={globalStyles.button}
-          onPress={toggleModal}
-        >
-          <Text style={globalStyles.buttonText}  >Nova aula</Text>
-        </TouchableOpacity>
-
+      <View style={globalStyles.tabContainer}>
+     
         <TouchableOpacity
           style={[
-            globalStyles.button,
-            selectedButtonStyle(view === "today")
+            globalStyles.tabButton,
+            selectedTabButtonStyle(view === "today")
           ]}
           onPress={() => setView('today')}
         >
-          <Text style={globalStyles.buttonText}  >Hoje</Text>
+          <Text style={[
+            globalStyles.tabButtonText,
+            selectedTabButtonTextStyle(view === "today") 
+            ]}> Hoje</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={[
-            globalStyles.button,
-            selectedButtonStyle(view === "week")
+            globalStyles.tabButton,
+            selectedTabButtonStyle(view === "week")
           ]}
           onPress={() => setView('week')}
         >
-          <Text style={globalStyles.buttonText}  >Semana</Text>
+          <Text style={[globalStyles.tabButtonText,  selectedTabButtonTextStyle(view === "week")]}  >Semana</Text>
         </TouchableOpacity>
       </View>
-
+   
       <ClassesView />
       <CreateClassModal isModalVisible={isModalVisible} toggleModal={toggleModal} navigation={navigation} />
 
+      <View
+      style={agendaStyles.absoluteContainer}
+      >
+
+      <TouchableOpacity
+          style={agendaStyles.circularButton}
+          onPress={toggleModal}
+          >
+          <Text style={agendaStyles.circularButtonText}  >+</Text>
+        </TouchableOpacity>
+
+          </View>
     </View>
   )
 }

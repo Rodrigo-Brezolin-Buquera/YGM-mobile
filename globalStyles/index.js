@@ -24,10 +24,22 @@ export const applyShadow = (style) => {
     return { ...style, ...shadowStyles };
 };
 
-export const selectedButtonStyle = (boolean) => {
-    return { backgroundColor: boolean ? colors.lightCian : colors.yellow }
+export const selectedButtonStyle = (isSelected) => {
+    return { backgroundColor: isSelected ? colors.lightCian : colors.yellow }
 
 }
+
+export const selectedTabButtonTextStyle = (isSelected) => {
+    return { fontWeight: isSelected ? "bold" : "none" }
+}
+
+export const selectedTabButtonStyle = (isSelected) => {
+    return { 
+        borderBottomWidth: isSelected ? 2 : 0,
+        borderBottomColor: isSelected ? colors.yellow : 'transparent',
+    }
+}
+
 
 
 export default StyleSheet.create({
@@ -38,6 +50,7 @@ export default StyleSheet.create({
         paddingBottom: '10em',
         justifyContent: 'flex-start',
         backgroundColor: colors.grey,
+        position:"relative",
         // minHeight: '100%',
     },
     wrapContainer: {
@@ -57,12 +70,33 @@ export default StyleSheet.create({
         paddingHorizontal: 40,
         width: "100%"
     },
+    tabContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        paddingHorizontal:10,
+        paddingVertical:5,
+        marginBottom:10,
+        backgroundColor: colors.black,
+        width: "100%",
+        gap:20
+    },
+    tabButton: {
+        padding: 3,
+        paddingBottom:0,
+        // borderRadius: 10,
+        alignItems: 'center',
+    },
     button: applyShadow({
         backgroundColor: colors.yellow,
         padding: 10,
         borderRadius: 10,
         alignItems: 'center',
     }),
+    tabButtonText:{
+        color: colors.white,
+        // fontWeight: 'bold',
+        fontSize: 18,
+    },
     buttonText: {
         color: colors.black,
         fontWeight: 'bold',
@@ -76,8 +110,8 @@ export default StyleSheet.create({
         minHeight: 50,
         display: "flex",
         justifyContent: "center",
-        paddingLeft: 4,
-    },
+        paddingLeft: 4
+        },
     inputText: {
         paddingLeft: 18,
         fontSize: 16

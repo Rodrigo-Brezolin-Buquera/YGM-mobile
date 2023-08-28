@@ -15,13 +15,18 @@ const Contract = () => {
 
   return (
     <View style={globalStyles.container} >
+
+
+
+      <ContractDetails contract={contract} />
+
       <View style={globalStyles.buttonContainer}>
 
         <TouchableOpacity
           style={globalStyles.button}
           onPress={toggleModal}
         >
-          <Text style={globalStyles.buttonText}>Novo</Text>
+          <Text style={globalStyles.buttonText}>Novo Plano</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -30,9 +35,6 @@ const Contract = () => {
           <Text style={globalStyles.buttonText}>Excluir</Text>
         </TouchableOpacity>
       </View>
-
-
-      <ContractDetails contract={contract} />
       <CreateContractModal
         isModalVisible={isModalVisible}
         toggleModal={toggleModal}
