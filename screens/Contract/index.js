@@ -16,11 +16,9 @@ const Contract = () => {
   return (
     <View style={globalStyles.container} >
 
-
-
       <ContractDetails contract={contract} />
 
-      <View style={globalStyles.buttonContainer}>
+      <View style={[globalStyles.buttonContainer, globalStyles.bottomCotainter]}>
 
         <TouchableOpacity
           style={globalStyles.button}

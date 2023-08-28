@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text } from 'react-native';
 import LongPressText from '../../../components/LongPressText';
+import globalStyles from '../../../globalStyles';
 import { mockLocal } from '../../../mockData';
 import { styles } from './styles';
-// import { Line, MainContainer, TextContainer } from '../../theme'; // Adjust the imports
 
 const Local = () => {
     const [business, setBusiness] = useState(mockLocal);
@@ -13,7 +13,7 @@ const Local = () => {
     }, []);
 
     return (
-        <View>
+        <View style={[styles.container, globalStyles.textContainer]} >
             <Text style={styles.label} >Endereço:</Text>
             <LongPressText text={business.address} atribute={'address'} id={'main'} />
 

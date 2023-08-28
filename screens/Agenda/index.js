@@ -1,14 +1,16 @@
 import { useState } from 'react'
-import { Text, View, TouchableOpacity } from 'react-native'
-import globalStyles, { selectedButtonStyle, selectedTabButtonStyle, selectedTabButtonTextStyle } from '../../globalStyles'
+import { Text, View, TouchableOpacity  } from 'react-native'
+import globalStyles, { selectedTabButtonStyle, selectedTabButtonTextStyle } from '../../globalStyles'
 import { agendaStyles } from './agendaStyles';
 import AvailableClasses from './AvailableClasses.js';
 import Calendar from './Calendar';
 import CreateClassModal from './CreateClassModal.js';
 
+
 const Agenda = ({ navigation }) => {
   const [view, setView] = useState("today");
   const [isModalVisible, setModalVisible] = useState(false);
+ 
 
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
@@ -57,17 +59,13 @@ const Agenda = ({ navigation }) => {
       <ClassesView />
       <CreateClassModal isModalVisible={isModalVisible} toggleModal={toggleModal} navigation={navigation} />
 
-      <View
-      style={agendaStyles.absoluteContainer}
-      >
-
+      <View style={agendaStyles.absoluteContainer} >
       <TouchableOpacity
           style={agendaStyles.circularButton}
           onPress={toggleModal}
           >
           <Text style={agendaStyles.circularButtonText}  >+</Text>
         </TouchableOpacity>
-
           </View>
     </View>
   )

@@ -34,7 +34,7 @@ export const selectedTabButtonTextStyle = (isSelected) => {
 }
 
 export const selectedTabButtonStyle = (isSelected) => {
-    return { 
+    return {
         borderBottomWidth: isSelected ? 2 : 0,
         borderBottomColor: isSelected ? colors.yellow : 'transparent',
     }
@@ -50,8 +50,7 @@ export default StyleSheet.create({
         paddingBottom: '10em',
         justifyContent: 'flex-start',
         backgroundColor: colors.grey,
-        position:"relative",
-        // minHeight: '100%',
+        position: "relative"
     },
     wrapContainer: {
         display: 'flex',
@@ -73,17 +72,24 @@ export default StyleSheet.create({
     tabContainer: {
         flexDirection: 'row',
         justifyContent: 'center',
-        paddingHorizontal:10,
-        paddingVertical:5,
-        marginBottom:10,
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        marginBottom: 10,
         backgroundColor: colors.black,
         width: "100%",
-        gap:20
+        gap: 20
     },
+    bottomCotainter: {
+        position: "absolute",
+        bottom: 0
+    },
+    textContainer: applyShadow({
+        backgroundColor: colors.white,
+        borderRadius:10
+    }),
     tabButton: {
         padding: 3,
-        paddingBottom:0,
-        // borderRadius: 10,
+        paddingBottom: 0,
         alignItems: 'center',
     },
     button: applyShadow({
@@ -92,9 +98,8 @@ export default StyleSheet.create({
         borderRadius: 10,
         alignItems: 'center',
     }),
-    tabButtonText:{
+    tabButtonText: {
         color: colors.white,
-        // fontWeight: 'bold',
         fontSize: 18,
     },
     buttonText: {
@@ -111,7 +116,7 @@ export default StyleSheet.create({
         display: "flex",
         justifyContent: "center",
         paddingLeft: 4
-        },
+    },
     inputText: {
         paddingLeft: 18,
         fontSize: 16

@@ -6,5 +6,8 @@ export const styles = StyleSheet.create({
         fontSize: 16, 
         fontWeight: "bold",
         marginBottom:2
+     },
+     container:{
+       padding:10
      }
 });
