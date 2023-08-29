@@ -1,28 +1,33 @@
 import React, { useState } from 'react';
-import { TextInput } from 'react-native';
-import globalStyles from '../../globalStyles';
+import { TextInput, TouchableOpacity , Text, View} from 'react-native';
+import { styles } from './styles';
 
 
 const RequestInput = ({ placeholder, setLoading }) => {
   const [text, setText] = useState('');
 
-  const handleKeyPress = (e) => {
-    if (e.nativeEvent.key === 'Enter') {
-        console.log(text)
-    }
+  const onPress = () => {
+
   };
 
   const onChange = (newText) => setText(newText);
 
   return (
-    <TextInput
-      style={globalStyles.input}
-      onChangeText={onChange}
-      onKeyPress={handleKeyPress}
-      value={text}
-      placeholder={placeholder}
-      autoFocus
-    />
+    <View style={styles.flexContainer}>
+      <TextInput
+        style={styles.input}
+        onChangeText={onChange}
+        value={text}
+        placeholder={placeholder}
+        autoFocus
+      />
+      <TouchableOpacity
+        style={styles.circularButton}
+        onPress={onPress}
+      >
+        <Text style={styles.circularButtonText} >+</Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 

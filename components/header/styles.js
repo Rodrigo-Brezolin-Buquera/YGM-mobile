@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         backgroundColor: colors.black,
-        height: 60,
+        height: 50,
         paddingHorizontal: 15,
         width: "100%"
     },

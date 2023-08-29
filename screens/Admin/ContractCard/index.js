@@ -1,17 +1,18 @@
 import { memo } from 'react';
 import { TouchableOpacity, Text, View } from 'react-native';
+import globalStyles from '../../../globalStyles';
 import { goToContract } from '../../../router/Coordinator';
-import { styles } from '../styles';
+import { adminStyles } from '../adminStyles';
 
 const ContractCard = ({ contract, navigation }) => {
 
   return (
     <TouchableOpacity
-      style={styles.card}
+      style={adminStyles.card}
       onPress={() => goToContract(navigation, contract.id)}
     >
-      <Text style={styles.label}>{contract.name}</Text>
-      <View style={styles.line}>
+      <Text style={adminStyles.label}>{contract.name}</Text>
+      <View style={adminStyles.line}>
         <Text >{contract.plan}</Text>
       </View>
     </TouchableOpacity>

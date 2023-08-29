@@ -5,6 +5,7 @@ import { mockContracts } from '../../../mockData';
 import ContractCard from '../ContractCard';
 import { useInput } from '../../../hooks/useInput';
 import { styles } from './styles';
+import { adminStyles } from '../adminStyles';
 
 const ContractList = () => {
     const [list, setList] = useState(mockContracts)
@@ -15,7 +16,7 @@ const ContractList = () => {
         list.filter(i => i.name?.toLowerCase().includes(nameFilter.toLowerCase()))
 
     return (
-        <>
+        <View style={adminStyles.userContainer} >
             <View style={styles.inputContainer} >
                 <TextInput
                     value={nameFilter}
@@ -31,12 +32,13 @@ const ContractList = () => {
                         data={filteredList}
                         renderItem={({ item }) => <ContractCard contract={item} navigation={navigation} />}
                         keyExtractor={item => item.id}
+                        contentContainerStyle={adminStyles.gap}
                     />
                     :
                     <Text>Não há usuários</Text>
 
             }
-        </>
+        </View>
     );
 };
 

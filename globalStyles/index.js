@@ -17,7 +17,7 @@ const shadowStyles = {
     },
     shadowOpacity: 0.3,
     shadowRadius: 3.84,
-    elevation: 5,
+    elevation: 3,
 };
 
 export const applyShadow = (style) => {
@@ -76,7 +76,7 @@ export default StyleSheet.create({
         marginBottom: 10,
         backgroundColor: colors.black,
         width: "100%",
-        gap: 20
+        gap: 30
     },
     bottomCotainter: {
         position: "absolute",
