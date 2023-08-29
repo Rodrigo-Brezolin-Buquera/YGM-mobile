@@ -33,7 +33,7 @@ const CheckinList = () => {
 
     return (
         <View style={globalStyles.container}>
-            <Text style={globalStyles.normalText} >Check-ins:</Text>
+            <Text style={globalStyles.boldText} >Check-ins realizados</Text>
             {
                 list.length ?
                     <FlatList

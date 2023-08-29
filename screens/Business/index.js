@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Text, View, TouchableOpacity } from 'react-native'
-import globalStyles, { selectedButtonStyle, selectedTabButtonStyle, selectedTabButtonTextStyle } from '../../globalStyles'
+import globalStyles, { selectedTabButtonStyle, selectedTabButtonTextStyle } from '../../globalStyles'
 import Local from './Local';
 import { Plans } from './Plans';
 import TeachersAndStyles from './TeachersAndStyles';

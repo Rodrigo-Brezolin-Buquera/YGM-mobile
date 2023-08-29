@@ -6,7 +6,7 @@ import {styles} from './styles';
 
 const ClassDetails = ({ yogaClass }) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, globalStyles.textContainer]}>
       <Text style={[globalStyles.boldText, styles.gap]}>
         {yogaClass.day} - {yogaClass.time}
       </Text>

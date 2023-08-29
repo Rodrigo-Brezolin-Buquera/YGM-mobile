@@ -5,8 +5,7 @@ export const styles = StyleSheet.create({
    
     listContainer: {
         flexDirection: 'column',
-        alignItems: 'center',
-        paddingVertical: 10,
+        alignItems: 'center'
     },
     title:{
         fontSize: 20,

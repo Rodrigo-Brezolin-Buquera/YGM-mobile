@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Header from "../../components/Header"
 import { Text, View, TouchableOpacity } from 'react-native'
-import globalStyles, { selectedButtonStyle } from '../../globalStyles'
+import globalStyles, { selectedTabButtonStyle, selectedTabButtonTextStyle } from '../../globalStyles'
 import AvailableClasses from './AvailableClasses.js'
 import ContractDetails from '../../components/ContractDetails'
 import { mockContracts } from '../../mockData'
@@ -13,9 +13,9 @@ const User = () => {
   const UserView = () => {
     switch (view) {
       case 'classes':
-        return <AvailableClasses/>
+        return <AvailableClasses />
       case 'account':
-        return <ContractDetails  contract={mockContracts[1] }/>
+        return <ContractDetails contract={mockContracts[1]} />
       default:
         return <Text>Classes</Text>;
     }
@@ -24,29 +24,34 @@ const User = () => {
   return (
     <View style={globalStyles.container} >
       <Header />
-      <View style={globalStyles.buttonContainer}>
+      <View style={globalStyles.tabContainer}>
 
         <TouchableOpacity
           style={[
-            globalStyles.button,
-            selectedButtonStyle(view === "classes")
+            globalStyles.tabButton,
+            selectedTabButtonStyle(view === "classes")
           ]}
           onPress={() => setView('classes')}
         >
-          <Text style={globalStyles.buttonText}>Aulas</Text>
+          <Text style={[
+            globalStyles.tabButtonText,
+            selectedTabButtonTextStyle(view === "classes")]}>Aulas</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={[
-            globalStyles.button,
-            selectedButtonStyle(view === "account")
+            globalStyles.tabButton,
+            selectedTabButtonStyle(view === "account")
           ]}
           onPress={() => setView('account')}
         >
-          <Text style={globalStyles.buttonText}>Conta</Text>
+          <Text style={[
+            globalStyles.tabButtonText,
+            selectedTabButtonTextStyle(view === "account")]}
+          >Conta</Text>
         </TouchableOpacity>
       </View>
-          <UserView/>
+      <UserView />
     </View>
   )
 }

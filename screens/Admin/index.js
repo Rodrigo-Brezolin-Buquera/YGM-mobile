@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Text, View, TouchableOpacity } from 'react-native'
-import globalStyles, { selectedButtonStyle, selectedTabButtonStyle, selectedTabButtonTextStyle } from '../../globalStyles'
+import globalStyles, { selectedTabButtonStyle, selectedTabButtonTextStyle } from '../../globalStyles'
 import ContractList from './ContractList';
 import UserList from './UserList';
 
@@ -31,7 +31,7 @@ const Admin = () => {
           <Text style={[
             globalStyles.tabButtonText,
             selectedTabButtonTextStyle(view === "users")
-          ]}  >Ativar contas</Text>
+          ]}  >Ativação</Text>
         </TouchableOpacity>
 
         <TouchableOpacity

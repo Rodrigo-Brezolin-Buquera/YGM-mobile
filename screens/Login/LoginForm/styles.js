@@ -19,9 +19,8 @@ export default StyleSheet.create({
     input:{
         marginBottom: 10,
         padding: 10,
-        borderColor: '#333',
-        borderWidth: 1,
         borderRadius: 10,
+        backgroundColor: colors.grey
     },
     errorMessage: {
         color: 'red',

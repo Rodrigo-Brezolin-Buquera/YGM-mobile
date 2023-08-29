@@ -35,12 +35,12 @@ export const selectedTabButtonTextStyle = (isSelected) => {
 
 export const selectedTabButtonStyle = (isSelected) => {
     return {
-        borderBottomWidth: isSelected ? 2 : 0,
+        borderBottomWidth: isSelected ? 3 : 0,
         borderBottomColor: isSelected ? colors.yellow : 'transparent',
+        borderBottomLeftRadius: isSelected ? 5 : 0,  
+        borderBottomRightRadius: isSelected ? 5 : 0,
     }
 }
-
-
 
 export default StyleSheet.create({
     container: {
@@ -73,7 +73,6 @@ export default StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         paddingHorizontal: 10,
-        paddingVertical: 5,
         marginBottom: 10,
         backgroundColor: colors.black,
         width: "100%",

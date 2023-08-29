@@ -7,6 +7,7 @@ import { goToAdmin, goToUser } from '../../../router/Coordinator';
 const LoginForm = ({ navigation }) => {
     const [loading, setLoading] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
+  
 
     return (
         <View style={styles.container}>
@@ -24,8 +25,6 @@ const LoginForm = ({ navigation }) => {
                     style={globalStyles.button}
                     onPress={()=>goToAdmin(navigation)}
                     // onPress={()=>goToUser(navigation , 1)}
-
-
                     disabled={loading}
                 >
                     <Text style={globalStyles.buttonText}  >Acessar</Text>
