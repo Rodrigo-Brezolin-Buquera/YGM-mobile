@@ -3,7 +3,6 @@ import { Text, View, TouchableOpacity } from 'react-native'
 import globalStyles, { selectedTabButtonStyle, selectedTabButtonTextStyle } from '../../globalStyles'
 import Local from './Local';
 import { Plans } from './Plans';
-import TeachersAndStyles from './TeachersAndStyles';
 
 const Business = () => {
   const [view, setView] = useState("local");
@@ -12,8 +11,6 @@ const Business = () => {
     switch (view) {
       case 'local':
         return <Local />
-      case 'teacher/styles':
-        return <TeachersAndStyles />
       case 'plans':
         return <Plans />
       default:
@@ -37,20 +34,6 @@ const Business = () => {
           }  >
             Local</Text>
         </TouchableOpacity>
-
-        <TouchableOpacity
-          style={[
-            globalStyles.tabButton,
-            selectedTabButtonStyle(view === 'teacher/styles')
-          ]}
-          onPress={() => setView('teacher/styles')}
-        >
-          <Text style={[
-            globalStyles.tabButtonText,
-            selectedTabButtonTextStyle(view === 'teacher/styles')
-          ]}
-          >Estilos</Text>
-        </TouchableOpacity >
 
         <TouchableOpacity
           style={[
