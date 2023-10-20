@@ -23,7 +23,7 @@ const LoginForm = ({ navigation }) => {
                 />
                 <TouchableOpacity
                     style={globalStyles.button}
-                    onPress={()=>goToAdmin(navigation)}
+                    // onPress={()=>goToAdmin(navigation)}
                     // onPress={()=>goToUser(navigation , 1)}
                     disabled={loading}
                 >
