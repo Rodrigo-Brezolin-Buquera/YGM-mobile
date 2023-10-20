@@ -22,7 +22,7 @@ const ContractDetails = ({ contract }) => {
         <Text style={globalStyles.normalText}> {contract?.started}</Text>
       </View>
 
-      {contract?.availableClasses !== null && (
+      {contract?.ends !== null && (
         <>
           <View style={[globalStyles.line, styles.gap]}>
             <Text style={globalStyles.boldText}>Fim previsto: </Text>
